@@ -8,7 +8,6 @@ class php5::install {
 	  'php5-curl',
 	  'php5-gd',
 	  'php5-fpm',
-	  'libapache2-mod-php5',
 	  'php5-dev',
 	  'php5-xdebug',
 	  'php-pear',

@@ -9,8 +9,8 @@ class phpmyadmin::install {
   file { '/etc/apache2/sites-enabled/001-phpmyadmin':
     ensure  => link,
     target  => '/etc/phpmyadmin/apache.conf',
-    require => Package['apache2'],
-    notify  => Service['apache2'],
+    require => Package['nginx'],
+    #notify  => Service['nginx'],
   }
 
 }
