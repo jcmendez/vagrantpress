@@ -1,6 +1,7 @@
 .vagrant
 .ey_local_data
 latest.tar.gz
+/puppet/modules/mysql
 ./wordpress/
 /wordpress/
 /wp-tests/
