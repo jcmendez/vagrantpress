@@ -1,0 +1,21 @@
+server {
+
+  listen 80 default_server;
+  listen [::]:80 default_server ipv6only=on;
+
+	access_log   /var/log/nginx/wp-site.access.log;
+	error_log    /var/log/nginx/wp-site.error.log;
+
+  root /vagrant/wordpress/;
+  index index.php;
+
+  location / {
+    try_files $uri $uri/ /index.php?$args; 
+  }
+
+  location ~ \.php$ {
+    try_files $uri =404;
+    include fastcgi_params;
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+  }
+}

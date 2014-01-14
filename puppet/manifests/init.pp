@@ -4,6 +4,8 @@ exec { 'apt_update':
 }
 
 class { 'git::install': }
+class { 'misc::install': }
+class { 'memcached::install': }
 class { 'nginx::install': }
 class { 'php5::install': }
 class { 'mysql::install': }
